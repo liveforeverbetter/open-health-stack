@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2026 Wellnizz contributors
+# SPDX-License-Identifier: Apache-2.0
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install pinned test dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Tests (offline guard on for every test)
+        run: python -m pytest -q
+      - name: Rebuild all results from synthetic data
+        run: ./reproduce.sh
+      - uses: actions/upload-artifact@v4
+        if: matrix.python == '3.13'
+        with:
+          name: results
+          path: results/*.json
+
+  no-network:
+    # Runs the full pipeline in a container with networking disabled at the kernel level,
+    # an independent check on top of the in-process audit hook.
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reproduce with --network none
+        run: >
+          docker run --rm --network none -v "$PWD":/w -w /w python:3.13-slim
+          sh -c "./reproduce.sh --out /tmp/results"

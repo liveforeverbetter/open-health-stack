@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Wellnizz contributors
+# SPDX-License-Identifier: Apache-2.0
+version = 1
+
+[[annotations]]
+path = ["LICENSE"]
+SPDX-FileCopyrightText = "Apache Software Foundation"
+SPDX-License-Identifier = "Apache-2.0"

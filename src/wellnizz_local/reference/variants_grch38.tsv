@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2026 Wellnizz contributors
+# SPDX-License-Identifier: CC0-1.0
+# wellnizz-local demo reference set (8 positions). Educational only, not for clinical use.
+# Coordinates, alleles and gene symbols: NCBI dbSNP, GRCh38.p14 placements, read on 2026-11-23 from
+#   https://api.ncbi.nlm.nih.gov/variation/v0/refsnp/<rs number>
+#   NCBI data is a US Government work and is in the public domain (https://www.ncbi.nlm.nih.gov/home/about/policies/).
+# Protein changes: as reported by dbSNP for the named RefSeq protein. Notes: written by Wellnizz contributors, CC0-1.0.
+# Positions are 1-based VCF coordinates. "alt" is the allele this note is about.
+rsid	chrom	pos	ref	alt	gene	protein_change	note
+rs1801133	1	11796321	G	A	MTHFR	NP_005948.3:p.Ala222Val (often called C677T)	A very common variant. Having one or two copies is frequent in many populations and is not a diagnosis on its own.
+rs1800562	6	26092913	G	A	HFE	p.Cys282Tyr (C282Y)	Studied in hereditary haemochromatosis (iron overload). Relevance depends on carrying two copies and on iron tests such as ferritin and transferrin saturation; ask a clinician.
+rs1799945	6	26090951	C	G	HFE	NP_620575.1:p.His63Asp (H63D)	A common HFE variant, usually of small effect on its own.
+rs429358	19	44908684	T	C	APOE	p.Cys130Arg	One of the two positions that define APOE e2/e3/e4. Calling the APOE type needs both positions and their phase; this tool reports each position separately.
+rs7412	19	44908822	C	T	APOE	p.Arg176Cys	One of the two positions that define APOE e2/e3/e4. Calling the APOE type needs both positions and their phase; this tool reports each position separately.
+rs4988235	2	135851076	G	A	MCM6 (LCT enhancer)	none (non-coding)	Lies in an enhancer of the lactase gene LCT. The A allele (written -13910T on the gene strand) is associated with lactase persistence in people of European ancestry.
+rs762551	15	74749576	C	A	CYP1A2	none (non-coding, *1F)	The A allele (CYP1A2*1F) is associated with higher inducibility of CYP1A2, an enzyme that breaks down caffeine.
+rs1815739	11	66560624	C	T	ACTN3	NP_001095.2:p.Arg577Ter (R577X)	Common in the general population. Two copies mean no alpha-actinin-3 protein in fast muscle fibres.

@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2026 Wellnizz contributors
+# SPDX-License-Identifier: Apache-2.0
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+results/
+# never commit personal data or stores
+*.db
+*.vcf
+*.vcf.gz
+device.key
+witness.json
+.wellnizz-local/

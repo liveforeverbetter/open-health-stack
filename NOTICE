@@ -1,0 +1,24 @@
+SPDX-FileCopyrightText: 2026 Wellnizz contributors
+SPDX-License-Identifier: Apache-2.0
+
+wellnizz-local
+Copyright 2026 Wellnizz contributors
+
+This product includes software developed by Wellnizz contributors and released
+under the Apache License, Version 2.0.
+
+Bundled data
+- src/wellnizz_local/reference/variants_grch38.tsv: coordinates, alleles, gene
+  symbols and protein changes taken from NCBI dbSNP (GRCh38.p14 placements, read
+  2026-11-23). NCBI data is a work of the US Government and in the public domain.
+  Educational notes in that file are by Wellnizz contributors and released under
+  CC0-1.0.
+- Synthetic sample data produced by `wellnizz-local synth` is released under CC0-1.0.
+  It is generated from a seeded pseudo-random number generator and describes no
+  real person.
+
+LOINC
+- The synthetic lab files use seven LOINC codes as identifiers. LOINC is
+  copyright Regenstrief Institute, Inc. and the LOINC Committee and is available
+  at no cost under the license at https://loinc.org/license/. No LOINC table or
+  database is distributed with this project.

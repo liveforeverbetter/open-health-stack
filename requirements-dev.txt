@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Wellnizz contributors
+# SPDX-License-Identifier: Apache-2.0
+# Test-only dependencies, pinned. The package itself uses only the Python standard library.
+pytest==8.3.4
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+exceptiongroup==1.2.2 ; python_version < "3.11"
+tomli==2.2.1 ; python_version < "3.11"
